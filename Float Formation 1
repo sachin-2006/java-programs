@@ -3,13 +3,14 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
+
 public class Solution {
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         float f=sc.nextFloat();
-        System.out.printf("%.6f",f);
-        System.out.printf("\n%.4f",f);
-        System.out.printf("\n%.2f",f);
-        System.out.println("\n"+(int)Math.round(f));    
+         System.out.printf("%.6f",f);
+         System.out.printf("\n%.4f",f);
+         System.out.printf("\n%.2f",f);
+         System.out.println("\n"+(int)Math.round(f));    
     }
 }
