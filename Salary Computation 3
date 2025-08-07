@@ -4,13 +4,13 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class solution{
+public class Solution{
     public static double calculateGrossSalary(int basicSalary) {
         double hra, da;
         if (basicSalary < 15000) {
             hra = 0.15 * basicSalary;
-            da = 0.90 * basicSalary;
-        } else {
+            da = 0.90 * basicSalary;}
+           else {
             hra = 5000;
             da = 0.98 * basicSalary;
         }
