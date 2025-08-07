@@ -5,6 +5,7 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution{
+
     public static double calculateGrossSalary(int basicSalary) {
         double hra, da;
         if (basicSalary < 15000) {
