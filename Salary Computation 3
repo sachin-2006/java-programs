@@ -4,7 +4,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution{
+public class solution{
     public static double calculateGrossSalary(int basicSalary) {
         double hra, da;
         if (basicSalary < 15000) {
