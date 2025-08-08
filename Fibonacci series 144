@@ -3,30 +3,26 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
-public class Solutoin{
-    
-public static void main(String[] args){
-    Scanner sc=new Scanner(System.in);
-    int n=sc.nextInt();
-    int m=sc.nextInt();
-    if(n<1||n>20||m<1||m>20)
-        System.out.println("Invalid Input");
-    else{
-        int a=0,b=1,sum=0;
-        for(int i=1;i<=m;i++){
-            int c;
-            if(i==1)c=0;
-            else if(i==2)c=1;
-            else{
-                c=a+b;
-                a=b;
-                b=c;
-            }
-            if(i>=n)
-                sum+=c;
-        }
-        System.out.println("The Sum of Fibonacci value is "+(double)sum);
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);        
+        int n = scanner.nextInt(); 
+        int m = scanner.nextInt();         
+        if (n < 1 || n > 20 || m < 1 || m > 20 || n > m) {
+            System.out.println("Invalid Input");
+            return;
+        }       
+        int[] fib = new int[21]; 
+        fib[1] = 0;
+        if (20 >= 2) fib[2] = 1;
+        for (int i = 3; i <= 20; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }        
+        int sum = 0;
+        for (int i = n; i <= m; i++) {
+            sum += fib[i];
+        }       
+        System.out.println("The Sum of Fibonacci value is " + (double)sum);
     }
 }
 }
