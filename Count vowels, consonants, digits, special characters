@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int v = 0, c = 0, d = 0, sp = 0;
+        for (char ch : s.toCharArray()) {
+            if ("aeiouAEIOU".indexOf(ch) != -1) 
+                v++;
+            else if (Character.isLetter(ch)) 
+                c++;
+            else if (Character.isDigit(ch)) 
+                d++;
+            else 
+                sp++;
+        }
+        System.out.println("vowels:" + v);
+        System.out.println("consonants:" + c);
+        System.out.println("digits:" + d);
+        System.out.println("special characters:" + sp);
+    }
+}
